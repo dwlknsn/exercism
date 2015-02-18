@@ -16,7 +16,6 @@ class Raindrops
   end
 
   def self.get_unique_primes(num)
-    # puts "--#{num}--"
     factors = []
     until num == 1
       PRIMES.each do |prime|
@@ -30,4 +29,3 @@ class Raindrops
   end
 end
 
-# %w(2 3 4 5 6 7 15 21 35 105).each { |n| puts Raindrops.convert(n.to_i) }
