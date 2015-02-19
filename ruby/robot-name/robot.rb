@@ -5,7 +5,7 @@ class Robot
   end
 
   def set_name
-    ('AA'..'ZZ').to_a.sample + ('000'..'999').to_a.sample
+    ('AA000'..'ZZ999').to_a.sample
   end
 
   def reset
