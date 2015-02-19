@@ -1,19 +1,13 @@
 class Complement
-  DNA = ["C", "G", "T", "A"]
-  RNA = ["G", "C", "A", "U"]
+  DNA = "CGTA"
+  RNA = "GCAU"
 
   def self.of_dna(string)
-    convert(string, DNA, RNA)
+    string.tr(DNA, RNA)
   end
 
   def self.of_rna(string)
-    convert(string, RNA, DNA)
-  end
-
-  def self.convert(string, array1, array2)
-    string.chars.map do |char|
-      array2[array1.index(char)]
-    end.join('')
+    string.tr(RNA, DNA)
   end
 
 end
