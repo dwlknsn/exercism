@@ -4,6 +4,6 @@ class Grains
   end
 
   def total
-    (1..64).to_a.inject { |sum, n| sum + square(n)}
+    2 ** 64 - 1
   end
 end
