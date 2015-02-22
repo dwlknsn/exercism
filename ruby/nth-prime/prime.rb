@@ -1,23 +1,12 @@
+require 'prime'
+
 class Prime
 
   def self.nth(num)
-    if num == 0
-      raise ArgumentError, "zero is not a prime"
+    if num < 1 || !num.integer?
+      raise ArgumentError
     else
-      prime_numbers = [2, 3]
-      until prime_numbers.count > num
-        i = prime_numbers.last
-        contains_prime = [true]
-        until contains_prime.include?(true) == false
-          i += 2
-          contains_prime = prime_numbers.map do |prime|
-            i % prime == 0
-          end
-        end
-        prime_numbers << i
-      end
-      prime_numbers[num - 1]
-
+      Prime.take(num).last
     end
   end
 
